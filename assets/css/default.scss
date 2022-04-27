@@ -1,8 +1,14 @@
 
-@import '/assets/css/colors';
+html, body {
+  padding: 0;
+  margin: 0;
+}
 
 .page {
+  display: flex;
   flex: 1;
   padding: 0;
+  width: 100%;
+  min-height: 100vh;
   text-align: center;
 }

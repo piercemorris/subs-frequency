@@ -6,17 +6,15 @@ export default defineNuxtConfig({
   alias: {
     "@": "/"
   },
+  css: ["@/assets/css/default.scss"],
   // @ts-ignore
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "/assets/css/default.scss";'
+          additionalData: '@import "/assets/css/_colors.scss";'
         }
       }
     }
   },
-  css: [
-    "@/assets/css/default.scss"
-  ],
 })
