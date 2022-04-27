@@ -1,16 +1,28 @@
 <template>
   <div class="container">
-    <input 
-      id="file" 
-      type="file" 
-      name="file"
-      class="custom-file-input"
-    />
-    <label for="file">Choose a file</label>
+    <form>
+      <input 
+        id="file" 
+        type="file" 
+        name="file"
+        accept=".ass,.srt"
+        @change="handleChange"
+        class="custom-file-input"
+        multiple
+      />
+      <label for="file">Choose a file</label>
+    </form>
   </div>
 </template>
 
-<script lang="ts">
+<script>
+export default {
+  methods: {
+    handleChange(e) {
+      console.log(e.target.files[0].name)
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -20,7 +32,6 @@
 	height: 0.1px;
 	opacity: 0;
 	overflow: hidden;
-	position: absolute;
 	z-index: -1;
 }
 
@@ -44,4 +55,5 @@
 	outline: 1px dotted #000;
 	outline: -webkit-focus-ring-color auto 5px;
 }
+
 </style>

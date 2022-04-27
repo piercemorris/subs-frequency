@@ -6,7 +6,7 @@
 
 <style lang="scss" scoped>
 .container {
-  flex: 1;
+  display: flex;
   justify-content: center;
   align-content: center;
 }
